@@ -3,3 +3,7 @@
 
 /* Header brand name */
 .site-header .brand{display:flex!important;align-items:center!important;text-decoration:none!important;font-family:"Cormorant Garamond",Georgia,serif!important;font-size:3.4rem!important;font-weight:800!important;line-height:1!important;letter-spacing:.02em!important;white-space:nowrap!important;color:#2a2223!important;}
+
+/* FINAL HEADER BRAND */
+header.site-header a.brand{font-size:56px!important;font-weight:900!important;font-family:"Cormorant Garamond",Georgia,serif!important;display:inline-block!important;line-height:1!important;letter-spacing:.03em!important;text-decoration:none!important;}
+@media(max-width:850px){header.site-header a.brand{font-size:36px!important;}}
