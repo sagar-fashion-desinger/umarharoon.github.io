@@ -1,1 +1,6 @@
 .hero-image img{opacity:1;transition:opacity .18s ease,transform 1.2s ease}.hero-dots i{cursor:pointer;transition:transform .2s,opacity .2s,background .2s}.hero-dots i.active{background:#a68125;opacity:1;transform:scale(1.18)}.hero-dots i:hover{transform:scale(1.25)}
+/* Premium hero slide motion */
+.hero-copy{will-change:opacity,transform}.hero-changing{animation:heroCopyIn .7s cubic-bezier(.22,.61,.36,1) both}.hero-image img{will-change:opacity,transform}.hero-image-changing{animation:heroImageIn .9s cubic-bezier(.22,.61,.36,1) both}
+@keyframes heroCopyIn{0%{opacity:.15;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes heroImageIn{0%{opacity:.35;transform:scale(1.045)}100%{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.hero-changing,.hero-image-changing{animation:none}.hero-image img{transition:none}}
