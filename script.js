@@ -72,5 +72,6 @@ function renderProducts(key,sub,activeTab){
 }
 collectionsTrigger?.addEventListener('click',e=>{e.stopPropagation();const open=collectionsNav.classList.toggle('open');collectionsTrigger.setAttribute('aria-expanded',String(open))});
 collectionsMenu?.querySelectorAll('[data-category]').forEach(btn=>btn.addEventListener('click',()=>openCategoryBrowser(btn.dataset.category)));
+document.querySelectorAll('.collection-card[data-category]').forEach(card=>card.addEventListener('click',e=>{e.preventDefault();openCategoryBrowser(card.dataset.category)}));
 document.querySelector('.category-close')?.addEventListener('click',()=>{categoryBrowser.classList.remove('open');categoryBrowser.setAttribute('aria-hidden','true')});
 document.addEventListener('click',e=>{if(collectionsNav&&!collectionsNav.contains(e.target)){collectionsNav.classList.remove('open');collectionsTrigger?.setAttribute('aria-expanded','false')}});
