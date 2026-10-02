@@ -4,3 +4,11 @@
 @keyframes heroCopyIn{0%{opacity:.15;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
 @keyframes heroImageIn{0%{opacity:.35;transform:scale(1.045)}100%{opacity:1;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){.hero-changing,.hero-image-changing{animation:none}.hero-image img{transition:none}}
+
+/* Editorial About section motion */
+.about{position:relative;overflow:hidden}.about-inner{position:relative;z-index:1}.about::before{content:"S";position:absolute;right:-.03em;top:8%;font-family:"Cormorant Garamond",serif;font-size:clamp(18rem,42vw,42rem);line-height:.7;color:rgba(166,129,37,.045);pointer-events:none;transform:translateX(10%)}
+.about-label{animation:aboutReveal .8s ease both}.about-heading{animation:aboutReveal .9s .08s ease both}.about-copy{animation:aboutReveal .9s .18s ease both}.about-values{animation:aboutReveal .9s .3s ease both}
+.about-heading h2{transition:transform .5s ease}.about-copy p{transition:transform .4s ease}.about-values>div{position:relative;overflow:hidden;transition:transform .35s ease,padding-left .35s ease}.about-values>div::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:#a68125;transition:width .45s ease}.about-values>div:hover{transform:translateX(6px)}.about-values>div:hover::after{width:100%}.about-values strong{transition:color .3s ease}.about-values>div:hover strong{color:#a68125}
+@keyframes aboutReveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.about::before{font-size:18rem;top:18%;right:-20%}.about-values>div:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.about-label,.about-heading,.about-copy,.about-values{animation:none}.about-heading h2,.about-copy p,.about-values>div,.about-values strong{transition:none}}
