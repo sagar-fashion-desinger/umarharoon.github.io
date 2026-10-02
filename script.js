@@ -71,7 +71,7 @@ function renderProducts(key,sub,activeTab){
   productGrid.innerHTML=products.map((p,i)=>'<article class="product-card"><img src="'+p[1]+'" alt="'+p[0]+'"><div class="product-info"><small>'+sub.toUpperCase()+'</small><h3>'+p[0]+'</h3><p>'+p[2]+'</p><a class="product-order" href="https://wa.me/923185484406?text=Hi%20Sagar%20Fashion%20Designer%2C%20I%27m%20interested%20in%20'+encodeURIComponent(p[0])+'.%20Please%20share%20details." target="_blank" rel="noopener noreferrer">Ask on WhatsApp <span>→</span></a></div></article>').join('');
 }
 collectionsTrigger?.addEventListener('click',e=>{e.stopPropagation();const open=collectionsNav.classList.toggle('open');collectionsTrigger.setAttribute('aria-expanded',String(open))});
-collectionsMenu?.querySelectorAll('[data-category]').forEach(btn=>btn.addEventListener('click',()=>openCategoryBrowser(btn.dataset.category)));
-document.querySelectorAll('.collection-card[data-category]').forEach(card=>card.addEventListener('click',e=>{e.preventDefault();openCategoryBrowser(card.dataset.category)}));
+collectionsMenu?.querySelectorAll('[data-category]').forEach(btn=>btn.addEventListener('click',()=>{window.location.href=btn.dataset.category+'.html'}));
+
 document.querySelector('.category-close')?.addEventListener('click',()=>{categoryBrowser.classList.remove('open');categoryBrowser.setAttribute('aria-hidden','true')});
 document.addEventListener('click',e=>{if(collectionsNav&&!collectionsNav.contains(e.target)){collectionsNav.classList.remove('open');collectionsTrigger?.setAttribute('aria-expanded','false')}});
